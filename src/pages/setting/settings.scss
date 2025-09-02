@@ -1,0 +1,57 @@
+* {
+  font-family: Inter;
+}
+.Configuration {
+  margin: 10px;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 24px 16px;
+  border-radius: 9px;
+  // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 1px solid rgba(217, 221, 225, 1);
+  .heading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .Configuration-heading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .material-symbols-outlined {
+    cursor: pointer;
+  }
+  .label {
+    margin-bottom: 10px;
+  }
+  .text-box {
+    margin-bottom: 10px;
+  }
+  .config {
+    display: flex;
+    flex-direction: row;
+  }
+  .label-input {
+    display: flex;
+    flex-direction: row;
+  }
+  .add-button {
+    margin-left: 10px;
+  }
+}
+
+.dx-datagrid
+  .dx-datagrid-content
+  .dx-datagrid-table
+  .dx-row
+  > td:not(.dx-validation-pending):not(
+    .dx-datagrid-select-all
+  ).dx-command-edit.dx-command-edit-with-icons
+  .dx-link {
+  color: #ff6c36 !important;
+}
+.setting-heading {
+  font-weight: 600;
+}

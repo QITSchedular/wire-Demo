@@ -1,0 +1,42 @@
+export const customers = [
+  {
+    ID: "1",
+    CUSTOMER_NAME: "Alice Gomez",
+    STATUS: "Active",
+    CODE: "customer2038A6",
+    EMAIL_ID: "123456789abcdef",
+    OTP_VERIFICATION: "Yes",
+  },
+  {
+    ID: "2",
+    CUSTOMER_NAME: "Aman Gomez",
+    STATUS: "Inactive",
+    CODE: "customer2038A6",
+    EMAIL_ID: "123456789abcdef",
+    OTP_VERIFICATION: "Yes",
+  },
+  {
+    ID: "3",
+    CUSTOMER_NAME: "Alice Mehta",
+    STATUS: "Active",
+    CODE: "customer2038A6",
+    EMAIL_ID: "123456789abcdef",
+    OTP_VERIFICATION: "Yes",
+  },
+  {
+    ID: "4",
+    CUSTOMER_NAME: "Rishab Gomez",
+    STATUS: "Active",
+    CODE: "customer2038A6",
+    EMAIL_ID: "123456789abcdef",
+    OTP_VERIFICATION: "Yes",
+  },
+  {
+    ID: "5",
+    CUSTOMER_NAME: "maitry",
+    STATUS: "Active",
+    CODE: "customer2038A6",
+    EMAIL_ID: "123456789abcdef",
+    OTP_VERIFICATION: "Yes",
+  },
+];

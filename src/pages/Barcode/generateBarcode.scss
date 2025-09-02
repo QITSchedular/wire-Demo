@@ -1,0 +1,129 @@
+@media print {
+  body * {
+    visibility: none;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .desktop-view {
+    display: none !important; // Hide canvas on print
+  }
+  .print-view {
+    display: block !important; // Show image for printing
+  }
+  .print-only {
+    display: block !important;
+    visibility: visible !important;
+    position: relative !important;
+  }
+
+  .palletBarcodeMain {
+    // margin: 0 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 4in !important;
+    width: 6in !important;
+    visibility: visible !important;
+    background: #fff;
+    page-break-after: avoid;
+
+    .border {
+      border: 2px solid black;
+      margin-left: 1px;
+      margin-right: 1px;
+      height: 4in !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 4in !important;
+      width: 6in !important;
+      max-height: 4in !important;
+      max-width: 6in !important;
+      visibility: visible !important;
+      background: #fff;
+      page-break-after: avoid;
+
+      .pallet {
+        color: black !important;
+        font-size: 26px;
+        margin-left: 4px;
+        text-align: left !important;
+        padding-left: 16px;
+        visibility: visible !important;
+
+        .title {
+          font-weight: 600;
+          visibility: visible !important;
+        }
+
+        .palletNumber {
+          visibility: visible !important;
+        }
+      }
+    }
+  }
+
+  .barcode {
+    margin: 0 !important;
+    visibility: visible !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .barcode canvas {
+    visibility: visible !important;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+}
+
+.bin-label-main {
+  border: 2px solid black;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 4in !important;
+  width: 6in !important;
+  visibility: visible !important;
+  background: #fff;
+  page-break-after: avoid;
+
+  .bin-label-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .barcode-bin {
+      display: flex;
+      flex-direction: column;
+      width: fit-content;
+      width: 80%;
+
+      .label {
+        text-align: center;
+        font-size: 60px;
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+@page {
+  size: 6in 4in;
+  margin: 0;
+}
+.desktop-view {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.print-view {
+  display: none;
+  max-width: 100%;
+}

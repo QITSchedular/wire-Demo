@@ -1,0 +1,11 @@
+export { default as HomePage } from "./home/home";
+export { default as ProfilePage } from "./profile/profile";
+export { default as TasksPage } from "./tasks/tasks";
+export { default as FormPage } from "./form/form";
+export { default as AddTicketPage } from "./ticket/AddTicket";
+export { default as CreateNewTicketPage } from "./ticket/CreateNewTicket";
+export { default as TicketDetailPage } from "./ticket/TicketDetail";
+export { default as SettingsPage } from "./setting/Settings.jsx";
+export { default as CustomerPage } from "./customers/Customer.jsx";
+export { default as AddCustomerPage } from "./customers/AddCustomers.jsx";
+export { default as GeneratePrint } from "./GeneratePrint/GeneratePrint.jsx";

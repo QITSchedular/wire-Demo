@@ -1,0 +1,53 @@
+.GeneratePrint {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  .content-section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    .input-section {
+      display: flex;
+      gap: 16px;
+      // align-items: center;
+      .dx-texteditor.dx-editor-outlined {
+        border-radius: 2px;
+      }
+    }
+    .grid-length {
+      font-size: 18px;
+      font-weight: 500;
+      color: #414c54;
+    }
+  }
+  .grid-section {
+    .dx-checkbox-checked.dx-checkbox-icon {
+      color: #ffffff !important;
+    }
+  }
+}
+
+.actionButton {
+  display: flex;
+  gap: 24px;
+
+  button {
+    border: none;
+    background-color: transparent;
+    color: #006cb5;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+    &:hover {
+      scale: 1.1;
+    }
+  }
+  .disabled {
+    color: #aaadad;
+  }
+}
+.dx-datagrid {
+  .dx-datagrid-header-panel {
+    padding-bottom: 10px !important;
+  }
+}

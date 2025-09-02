@@ -1,0 +1,71 @@
+.add-customers {
+  margin: 20px;
+  .sub-heading {
+  }
+  .dx-texteditor.dx-editor-filled .dx-texteditor-input {
+    padding: 15px;
+  }
+  .dataGrid {
+    background-color: #fff;
+    border-bottom: 1px solid #c2c2c2;
+    padding: 4px 0px 25px 0px;
+    border-bottom: none;
+    border-radius: 8px;
+    border: 1px solid
+      var(--action-border-neutral-default, rgba(21, 18, 18, 0.2));
+    td {
+      .status-text {
+        &[data-type="Active"] {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          color: green;
+        }
+        &[data-type="Inactive"] {
+          color: red;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+        }
+        .dot {
+          font-weight: 800;
+          font-size: xx-large;
+          margin-top: 12px;
+        }
+      }
+    }
+    .dx-checkbox-indeterminate .dx-checkbox-icon {
+      color: #fff;
+    }
+  }
+}
+
+.dx-datagrid-header-panel {
+  padding: 15px 15px;
+}
+////////////////////////////////////////////////////////////////
+.AddCustomers {
+  margin: 15px;
+  .row1 {
+    .material-symbols-outlined {
+      background-color: #ff6c36;
+      border-radius: 50%;
+    }
+    .TextBoxWrapper {
+      display: flex;
+      cursor: pointer;
+
+      align-items: center;
+      .arrow {
+        .material-symbols-outlined {
+          cursor: pointer;
+        }
+        background: #fff;
+      }
+    }
+  }
+  .create-new {
+    // background-color: #f44336;
+    color: #fff;
+  }
+}
