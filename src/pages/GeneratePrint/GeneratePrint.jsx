@@ -19,7 +19,7 @@ const batchCode = [{ id: 1, batchNo: "BTCH001" }];
 const mockDetails = [
   {
     unikNo: 1,
-    serialNo: "10001",
+    serialNo: "224COL8000640",
     docEntry: "D-001",
     productCode: "FGW0034ACS001",
     batchCode: "BTCH001",
@@ -35,7 +35,7 @@ const mockDetails = [
   },
   {
     unikNo: 2,
-    serialNo: "10002",
+    serialNo: "224COL8000682",
     docEntry: "D-002",
     productCode: "FGW0034ACS001",
     batchCode: "BTCH001",
@@ -51,7 +51,7 @@ const mockDetails = [
   },
   {
     unikNo: 3,
-    serialNo: "10003",
+    serialNo: "224COL8000667",
     docEntry: "D-003",
     productCode: "FGW0034ACS001",
     batchCode: "BTCH001",
@@ -67,23 +67,7 @@ const mockDetails = [
   },
   {
     unikNo: 4,
-    serialNo: "10004",
-    docEntry: "D-004",
-    productCode: "FGW0034ACS001",
-    batchCode: "BTCH001",
-    expiryDate: "2027-02-01",
-    productName: "Fiber Optic Cable",
-    eanCase: "EAN-333333",
-    material: "Fiber",
-    materialDesc: "Single mode fiber optic cable",
-    shipperPerPallet: 30,
-    sscc: "SSCC-10003",
-    palletQty: 10,
-    unitOfMeasure: "MTR",
-  },
-  {
-    unikNo: 4,
-    serialNo: "10004",
+    serialNo: "224COL8000666",
     docEntry: "D-004",
     productCode: "FGW0034ACS001",
     batchCode: "BTCH001",
@@ -99,8 +83,8 @@ const mockDetails = [
   },
   {
     unikNo: 5,
-    serialNo: "10005",
-    docEntry: "D-005",
+    serialNo: "224COL8000689",
+    docEntry: "D-004",
     productCode: "FGW0034ACS001",
     batchCode: "BTCH001",
     expiryDate: "2027-02-01",
@@ -115,8 +99,8 @@ const mockDetails = [
   },
   {
     unikNo: 6,
-    serialNo: "10006",
-    docEntry: "D-006",
+    serialNo: "224COL8000634",
+    docEntry: "D-005",
     productCode: "FGW0034ACS001",
     batchCode: "BTCH001",
     expiryDate: "2027-02-01",
@@ -131,8 +115,8 @@ const mockDetails = [
   },
   {
     unikNo: 7,
-    serialNo: "10007",
-    docEntry: "D-007",
+    serialNo: "224COL8000789",
+    docEntry: "D-006",
     productCode: "FGW0034ACS001",
     batchCode: "BTCH001",
     expiryDate: "2027-02-01",
@@ -147,8 +131,8 @@ const mockDetails = [
   },
   {
     unikNo: 8,
-    serialNo: "10008",
-    docEntry: "D-008",
+    serialNo: "224COL8000765",
+    docEntry: "D-007",
     productCode: "FGW0034ACS001",
     batchCode: "BTCH001",
     expiryDate: "2027-02-01",
@@ -163,8 +147,8 @@ const mockDetails = [
   },
   {
     unikNo: 9,
-    serialNo: "10009",
-    docEntry: "D-009",
+    serialNo: "224COL8000709",
+    docEntry: "D-008",
     productCode: "FGW0034ACS001",
     batchCode: "BTCH001",
     expiryDate: "2027-02-01",
@@ -179,7 +163,39 @@ const mockDetails = [
   },
   {
     unikNo: 10,
-    serialNo: "10010",
+    serialNo: "224COL8000345",
+    docEntry: "D-009",
+    productCode: "FGW0034ACS001",
+    batchCode: "BTCH001",
+    expiryDate: "2027-02-01",
+    productName: "Fiber Optic Cable",
+    eanCase: "EAN-333333",
+    material: "Fiber",
+    materialDesc: "Single mode fiber optic cable",
+    shipperPerPallet: 30,
+    sscc: "SSCC-10003",
+    palletQty: 10,
+    unitOfMeasure: "MTR",
+  },
+  {
+    unikNo: 11,
+    serialNo: "224COL8000610",
+    docEntry: "D-010",
+    productCode: "FGW0034ACS001",
+    batchCode: "BTCH001",
+    expiryDate: "2027-02-01",
+    productName: "Fiber Optic Cable",
+    eanCase: "EAN-333333",
+    material: "Fiber",
+    materialDesc: "Single mode fiber optic cable",
+    shipperPerPallet: 30,
+    sscc: "SSCC-10003",
+    palletQty: 10,
+    unitOfMeasure: "MTR",
+  },
+  {
+    unikNo: 12,
+    serialNo: "224COL8000611",
     docEntry: "D-010",
     productCode: "FGW0034ACS001",
     batchCode: "BTCH001",
@@ -462,6 +478,7 @@ const GeneratePrint = () => {
           qrCodeImage={qrCodeImage}
           onClose={() => setQrPopupVisible(false)}
           allSerials={allSerials}
+          serialCount={grpoDetails.length}
         />
         <PopupHelpComponent
           popupVisible={popupVisible}

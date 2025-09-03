@@ -3,7 +3,13 @@ import { SerialNoBarcode } from "../../pages/Barcode/generateBarcode";
 import QrCode from "../../pages/QrCodeGeneration/QrCode";
 import { useEffect } from "react";
 
-const PopupHelpQR = ({ popupVisible, onClose, qrCodeImage, allSerials }) => {
+const PopupHelpQR = ({
+  popupVisible,
+  onClose,
+  qrCodeImage,
+  allSerials,
+  serialCount,
+}) => {
   const serialsArray = allSerials
     ? allSerials.toString().trim().split(/\s+/) // splits by spaces
     : [];
@@ -35,6 +41,27 @@ const PopupHelpQR = ({ popupVisible, onClose, qrCodeImage, allSerials }) => {
 
         <div
           style={{
+            // border: "1px solid #ddd",
+            // borderRadius: "4px",
+            padding: "10px",
+            paddingBottom: "10px",
+            marginBottom: "10px",
+          }}
+        >
+          <div
+            style={{
+              fontSize: "18px",
+              color: "#090909ff",
+              marginTop: "5px",
+              fontWeight: "bolder",
+            }}
+          >
+            MODEL: Tapo C201(IN)
+          </div>
+        </div>
+
+        <div
+          style={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -44,37 +71,92 @@ const PopupHelpQR = ({ popupVisible, onClose, qrCodeImage, allSerials }) => {
         >
           {/* Left barcodes */}
           <div
-            style={{ display: "flex", flexDirection: "column", gap: "10px" }}
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "10px",
+              flex: "1",
+            }}
           >
             {serialsArray.slice(0, midIndex).map((serial) => (
               <SerialNoBarcode
                 key={serial}
                 value={serial}
-                scale={2}
+                scale={1}
                 barcodeType="code128"
               />
             ))}
           </div>
 
+          {/* Center - QR Code and PCS SN */}
           <div
-            className="qr-image"
             style={{
               display: "flex",
-              justifyContent: "center",
+              flexDirection: "column",
               alignItems: "center",
-              border: "none",
+              justifyContent: "center",
+              gap: "15px",
+              padding: "10px",
             }}
           >
-            <QrCode qrCodeImage={qrCodeImage} />
+            {/* PCS SN label */}
+            <div
+              style={{
+                textAlign: "center",
+                fontSize: "16px",
+                fontWeight: "bold",
+                color: "#000",
+              }}
+            >
+              <div>{serialCount || serialsArray.length}PCS</div>
+              <div style={{ marginTop: "5px" }}>SN</div>
+            </div>
+
+            <div
+              style={{
+                width: "2px",
+                height: "47px",
+                backgroundColor: "#000",
+                // margin: "10px 0",
+              }}
+            ></div>
+
+            <div
+              className="qr-image"
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                border: "none",
+              }}
+            >
+              <QrCode qrCodeImage={qrCodeImage} />
+            </div>
+
+            <div
+              style={{
+                width: "2px",
+                height: "47px",
+                backgroundColor: "#000",
+                // margin: "10px 0",
+              }}
+            ></div>
           </div>
 
           {/* Right barcodes */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "5px" }}>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "5px",
+              flex: "1",
+            }}
+          >
             {serialsArray.slice(midIndex).map((serial) => (
               <SerialNoBarcode
                 key={serial}
                 value={serial}
-                scale={2}
+                scale={1}
                 barcodeType="code128"
               />
             ))}

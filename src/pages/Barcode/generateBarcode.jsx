@@ -44,6 +44,7 @@ export const SerialNoBarcode = ({ value, barcodeType, scale }) => (
         height={10}
         scale={scale || 5}
       />
+      <div style={{ textAlign: "center" }}>{value}</div>
     </div>
   </div>
 );
