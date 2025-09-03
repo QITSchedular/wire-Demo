@@ -38,7 +38,7 @@ const PopupHelpQR = ({ popupVisible, onClose, qrCodeImage, allSerials }) => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            height: "calc(100% - 50px)", // take remaining popup height
+            // height: "calc(100% - 50px)", // take remaining popup height
             gap: "7px",
           }}
         >

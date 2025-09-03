@@ -309,7 +309,7 @@ const GeneratePrint = () => {
   const handleGenerateCombinedQR = () => {
     if (grpoDetails.length === 0) return alert("No serials scanned!");
 
-    const combinedText = grpoDetails.map((d) => d.serialNo).join("/n");
+    const combinedText = grpoDetails.map((d) => d.serialNo).join("\n");
     generateQrImage(combinedText);
     setAllSerials(combinedText);
     setSelectedSerial(null);

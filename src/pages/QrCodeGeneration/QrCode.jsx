@@ -13,7 +13,12 @@ const QrCode = ({ qrCodeImage }) => {
             <img
               src={qrCodeImage}
               alt="QR Code"
-              style={{ width: "250px", height: "250px" }}
+              style={{
+                width: "250px",
+                height: "250px",
+                border: "none",
+                borderRadius: "unset",
+              }}
             />
             {/* <div className="info">{selectGrpo?.qR_Code}</div> */}
           </div>
