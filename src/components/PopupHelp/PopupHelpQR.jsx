@@ -74,7 +74,8 @@ const PopupHelpQR = ({
             style={{
               display: "flex",
               flexDirection: "column",
-              gap: "10px",
+              alignItems: "center",
+              gap: "12px",
               flex: "1",
             }}
           >
@@ -148,7 +149,8 @@ const PopupHelpQR = ({
             style={{
               display: "flex",
               flexDirection: "column",
-              gap: "5px",
+              alignItems: "center",
+              gap: "12px",
               flex: "1",
             }}
           >
