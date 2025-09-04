@@ -18,6 +18,7 @@ const QrCode = ({ qrCodeImage }) => {
                 height: "250px",
                 border: "none",
                 borderRadius: "unset",
+                marginBottom: "10px",
               }}
             />
             {/* <div className="info">{selectGrpo?.qR_Code}</div> */}

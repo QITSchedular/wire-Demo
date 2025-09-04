@@ -1,0 +1,146 @@
+.PopupHelp {
+  .popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+    /* border-bottom: 1px solid; */
+  }
+
+  .QRMainContainer {
+    border: 1px solid #000;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .QRTitle {
+    font-size: 18px;
+    color: rgb(81 79 79);
+    margin-top: 5px;
+    font-weight: bolder;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+  .serialLable {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+  }
+  .serial-barcode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // height: "calc(100% - 50px)"; // take remaining popup height
+    gap: 7px;
+
+    .left-barcode {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      flex: 1;
+    }
+    .center-QR {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      padding: 10px;
+
+      .center-line {
+        width: 2px;
+        height: 47px;
+        background-color: #000;
+        // margin: 10px 0;
+      }
+      .qr-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+      }
+    }
+    .right-barcode {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      flex: 1;
+    }
+  }
+  .print-btn {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 20px;
+  }
+}
+@media print {
+  .desktop-view {
+    display: none !important; // Hide canvas on print
+  }
+  .center-line {
+    width: 2px;
+    height: 47px;
+    background-color: #000;
+    visibility: visible !important;
+    display: block !important;
+  }
+}
+// @media print {
+//   .QRTitle {
+//     font-size: 18px;
+//     color: rgb(81 79 79);
+//     margin-top: 5px;
+//     font-weight: bolder;
+//     padding-bottom: 10px;
+//     margin-bottom: 10px;
+//   }
+//   .serialLable {
+//     text-align: center;
+//     font-size: 16px;
+//     font-weight: bold;
+//     color: #000;
+//   }
+//   .serial-barcode {
+//     display: flex !important;
+//     justify-content: space-between !important;
+//     align-items: flex-start !important;
+//     gap: 10px !important;
+
+//     .right-barcode,
+//     .left-barcode {
+//       display: flex;
+//       flex-direction: column;
+//       align-items: center;
+//       gap: 12px;
+//       flex: 1;
+//     }
+//     .center-line {
+//       width: 2px;
+//       height: 47px;
+//       background-color: #000;
+//       align-items: center;
+//       // margin: 10px 0;
+//     }
+//     .qr-image {
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       border: none;
+
+//       img,
+//       canvas {
+//         border-radius: 0 !important; // ✅ rectangular QR
+//         max-width: 200px;
+//         height: auto;
+//       }
+//     }
+//   }
+
+//   .center-QR img {
+//     max-width: 200px !important; // shrink QR for print balance
+//   }
+// }
