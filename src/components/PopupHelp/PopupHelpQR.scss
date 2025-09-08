@@ -81,13 +81,6 @@
   .desktop-view {
     display: none !important; // Hide canvas on print
   }
-  .center-line {
-    width: 2px;
-    height: 47px;
-    background-color: #000;
-    visibility: visible !important;
-    display: block !important;
-  }
 }
 // @media print {
 //   .QRTitle {

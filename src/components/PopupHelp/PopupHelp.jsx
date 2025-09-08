@@ -36,9 +36,9 @@ const PopupHelpComponent = ({ popupVisible, onHiding, serialNo, onClose }) => {
             }}
           >
             <SerialNoBarcode value={serialNo} barcodeType="code128" />
-            <span style={{ paddingTop: "14px", fontSize: "20px" }}>
+            {/* <span style={{ paddingTop: "14px", fontSize: "20px" }}>
               {serialNo}
-            </span>
+            </span> */}
           </div>
         </div>
       </Popup>

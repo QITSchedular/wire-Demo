@@ -33,6 +33,16 @@ const PopupHelpQR = ({
         <head>
           <title>Print Barcode</title>
           <style>
+
+          * {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+  @page {
+  size: 4in 6in;
+  margin: 0;
+}
+
                         .desktop-view {
     display: none !important; // Hide canvas on print
   }
@@ -98,6 +108,14 @@ const PopupHelpQR = ({
             justify-content: center;
             padding: 10px;
             gap: 15px;
+
+                      .center-line {
+            width: 2px;
+            height: 47px;
+            background-color: #000 !important;
+            visibility: visible !important;
+            display: block !important;
+          }
           }
 
           .center-QR .qr-image img,
@@ -111,8 +129,10 @@ const PopupHelpQR = ({
             width: 2px;
             height: 47px;
             background-color: #000;
+            visibility: visible !important;
             display: block !important;
           }
+
           </style>
         </head>
         <body>
@@ -126,7 +146,7 @@ const PopupHelpQR = ({
     printWindow.onload = () => {
       printWindow.focus();
       printWindow.print();
-      // printWindow.close();
+      printWindow.close();
     };
   };
 
